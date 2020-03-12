@@ -1,0 +1,363 @@
+<!doctype html>
+
+<html>
+	
+<head>
+	
+<!--The following displays language used in browser to interpret page -->
+<meta charset="UTF-8">
+
+<!--The following line of code displays the page title on a browser tab -->
+<title>AUTOPIPE | Home</title>
+
+<!--link tags are for linking to external files, in this case your CSS stylesheet-->
+<link href="style.css" rel="stylesheet" type="text/css">
+	
+<!--link tags are for linking to external files, in this case a special CSS stylesheet-->
+<link href="normalize.css" rel="stylesheet" type="text/css">
+
+<!--the following tag tells the browser to adjust the site according to screen size-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!--The following code links to the jquery library -->
+<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+
+<!--The following code links to the javascript file that runs the slideshow -->	
+<script type="text/javascript" src="js/jquery.cycle2.min.js"></script>
+    
+<!--The following code links to the javascript file that runs the parallax image -->    
+<script src="js/parallax.min.js"></script>
+	
+<!--The following code links to Google Fonts-->
+<link href="https://fonts.googleapis.com/css?family=Raleway:900|Rubik" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Arimo|Heebo|Muli|Nunito+Sans|Oxygen|Ubuntu&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P|Questrial|Ramabhadra|Reenie+Beanie|Shadows+Into+Light&display=swap" rel="stylesheet">
+	
+<!--The following javscript runs the jquery slideshow -->
+<script type="text/javascript">
+$('#slider').cycle({});
+</script>
+
+<!--The following javascript runs the nav bar which disappears on scroll-->
+<script type="text/javascript">
+// Hide Header on on scroll down
+var didScroll;
+var lastScrollTop = 0;
+var delta = 5;
+var navbarHeight = $('header').outerHeight();
+
+$(window).scroll(function(event){
+    didScroll = true;
+});
+
+setInterval(function() {
+    if (didScroll) {
+        hasScrolled();
+        didScroll = false;
+    }
+}, 250);
+
+function hasScrolled() {
+    var st = $(this).scrollTop();
+    
+    // Make sure they scroll more than delta
+    if(Math.abs(lastScrollTop - st) <= delta)
+        return;
+    
+    // If they scrolled down and are past the navbar, add class .nav-up.
+    // This is necessary so you never see what is "behind" the navbar.
+    if (st > lastScrollTop && st > navbarHeight){
+        // Scroll Down
+        $('header').removeClass('nav-down').addClass('nav-up');
+    } else {
+        // Scroll Up
+        if(st + $(window).height() < $(document).height()) {
+            $('header').removeClass('nav-up').addClass('nav-down');
+        }
+    }
+    
+    lastScrollTop = st;
+}
+</script>
+    
+<!--Favicon - images are in a folder called 'fav'-->
+<link rel="apple-touch-icon" sizes="180x180" href="img/sitelogo.jpg">
+<link rel="icon" type="image/png" sizes="32x32" href="img/sitelogo-small.jpg">
+<link rel="icon" type="image/png" sizes="16x16" href="img/sitelogo-small.jpg">
+<link rel="manifest" href="img/fav/site.webmanifest">
+<link rel="mask-icon" href="img/sitelogo.jpg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+<!--End Favicon-->
+    
+<!--back to top button-->
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+<script>
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
+    document.getElementById("myBtn").style.display = "block";
+  } else {
+    document.getElementById("myBtn").style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}    
+</script>   
+    
+<meta name="description" content="Autopipe is an alternative indi rock band from San Luis Obispo, California." />
+<meta content = “autopipe,” “cal poly music,” “slo music,” “slo bands,” “koala dreams,” “music in slo,” “house shows,” “alternative rock,” “indi rock,” “san luis obispo” name = “keywords”>
+    
+</head>
+
+<body>
+
+<!--beginning of navigation section-->
+<header>
+<div class="nav-container">
+<div class="brand"><img src="img/sitelogo.png" width="70" height="70" alt="Autopipe logo" hspace="5"/></div>
+<nav>
+<div class="nav-mobile"><a id="nav-toggle" href="#!"><span></span></a></div>
+  <ul class="nav-list">
+        <li>
+          <a class="hvr-push" href="#home">ABOUT</a>
+        </li>
+	   <li>
+          <a class="hvr-push" href="#gal">GALLERY</a>
+		  </li>
+	  	<li>
+          <a class="hvr-push" href="#tl">WHO IS AUTOPIPE?</a>
+        </li>
+        <li>
+          <a class="hvr-push" href="#vid">SHOWS</a>
+			</li>
+      <li>
+          <a class="hvr-push" href="#num">HISTORY</a>
+			</li>
+      </ul>
+</nav>
+     <div class="typewriter">
+          <h1>AUTOPIPE. THE BAND.</h1>
+        </div>
+</div>
+<!--closing navigation tag-->
+</header>
+<!--end of navigation section-->
+    
+<!--main image-->
+<div class="container" alt="Autopipe members Oliver Tawney, Arjun Urbonas, and Liam Graham playing at an outdoor show. Oliver wear clown makeup and Arjun wears a pair of overalls."> 
+</div>
+<!--animated welcome-->
+<div class="wrapper">
+    
+<!--animated welcome code here-->	
+</div>
+    
+<!--beginning of main content area-->
+    <a id="home"></a><div class="row whiteBG">
+        <img src='img/autopipe-logo%20copy.png' width=90% height=70px/>
+<article>
+<p class="tab">MAKIN MUSIC FOR THE BEAUTIFUL FOLKS OF SAN LUIS OBISPO. CATCH THEM LIVE FOR A SHOCKING AND INVIGORATING EXPERIENCE...<br>
+
+    <h3><font color="#e43232">LISTEN BELOW</font></h3>
+<article>
+  <div class="table">
+      
+	<div id="trip">
+
+        <iframe style="border: 0; width: 350px; height: 350px; padding: 5px;" src="https://bandcamp.com/EmbeddedPlayer/track=2716806414/size=large/bgcol=ffffff/linkcol=de270f/minimal=true/transparent=true/" seamless><a href="http://autopipe.bandcamp.com/track/koala-dreams">Koala Dreams by Autopipe</a></iframe>
+            
+        <iframe style="border: 0; width: 350px; height: 350px; padding: 5px;" src="https://bandcamp.com/EmbeddedPlayer/track=169116814/size=large/bgcol=ffffff/linkcol=de270f/minimal=true/transparent=true/" seamless><a href="http://autopipe.bandcamp.com/track/in-the-mouths-of-kings">In The Mouths Of Kings by Autopipe</a></iframe>
+            
+        <iframe style="border: 0; width: 350px; height: 350px; vspace:20; padding: 5px;" src="https://bandcamp.com/EmbeddedPlayer/album=2066192429/size=large/bgcol=ffffff/linkcol=de270f/minimal=true/transparent=true/" seamless><a href="http://autopipe.bandcamp.com/album/procrastinator-live-demos">Procrastinator Live Demos by Autopipe</a></iframe>
+
+	</div>
+      <a class="hvr-skew-forward" href="https://www.instagram.com/autopipetheband/?hl=en" target="_top">Instagram</a>
+</div>
+		
+</article>    
+    
+</article>
+</div>
+    
+    <div class="parallax" data-parallax="scroll" data-bleed="10" data-speed="0.2" iosFix="true" data-image-src="img/arjunrocks.jpg">
+</div>
+
+<!--beginning of slideshow section-->
+<div class="row blueBG"><!--beginning of row-->
+    <h2 id="gal"><font color="white">Band Practice with Autopipe</font></h2>
+<article><!--beginning of article-->
+    <p class="tab"><font color="white">GET AN INSIDE LOOK AT WHAT IT FEELS LIKE TO BE AT BAND PRACTICE WITH AUTOPIPE.</font></p>
+<!--beginning of slideshow-->
+<div id="slider"
+data-cycle-caption="#alt-caption"
+data-cycle-caption-template="{{alt}}"
+data-cycle-fx="scrollHorz"
+data-cycle-pause-on-hover="true"
+data-cycle-speed="200">
+<div class="cycle-prev"></div>
+<div class="cycle-next"></div>
+<img src="img/1.jpg" width="100%" height="100%" alt="AFTER A FAILED ATTEMPT AT PITCHING THEIR GUITARS VOCALLY, JUNIOR FORESTRY MAJOR OLIVER TAWNEY ADMITS DEFEAT AND PULLS OUT HIS PHONE. OLIVER PLAYS A STEADY NOTE OFF AN APP WHILE JUNIOR URBAN PLANNING MAJOR HANK MCKAY, THE NEWEST MEMBER OF AUTOPIPE, PITCHES HIS BASS GUITAR IN HIS LIVING ROOM FOR LAST-MINUTE 7 P.M. BAND PRACTICE. 2/9/20"/>
+<img src="img/2.jpg" width="100%" height="100%" alt="AS THE BAND GETS READY TO PRACTICE, JUNIOR ARCHITECTURE MAJOR ARJUN URBONAS LAUGHS AT A JOKE CRACKED BY BANDMATE AND FRIEND, OLIVER. ARJUN MET OLIVER THROUGH SOME MUTUAL FRIENDS DURING THEIR FRESHMEN YEAR AFTER WORD GOT OUT THAT THE BAND WAS LOOKING FOR A BASSIST. LATER, ARJUN WAS SLOTTED INTO THE POSITION OF LEAD GUITARIST, WHERE HE REMAINS TODAY. 2/9/20"/>
+<img src="img/3.jpg" width="100%" height="100%" alt="DAYS OLD BEER, A CUP OF COFFEE, A TRADER JOES RECEIPT, LOLLIPOPS, AND A NAPKIN ARE PLACED ATOP THE LIVING ROOM COFFEE TABLE AS THE BAND CLEARS OFF THE SURFACES OF THEIR EQUIPMENT. AFTER FORMING THE BAND FRESHMEN YEAR, OLIVER AND JUNIOR SOIL SCIENCE MAJOR LIAM GRAHAM MOVED INTO ‘APARTMENT 6’, WHERE THE GUYS HAVE BAND PRACTICE AND HOST WEEKLY “FIT-CHECK FRIDAY” PARTIES FOR THEM AND THEIR FRIENDS. 2/9/20"/>
+<img src="img/4.jpg" width="100%" height="100%" alt="LIAM GRAHAM, HANK MCKAY, OLIVER TAWNEY, AND ARJUN URBONAS WARM-UP FOR A QUICK BAND PRACTICE AFTER A LONG WEEKEND. AUTOPIPE ACHIEVED ITS GOAL OF GEOGRAPHIC EXPANSION AFTER PLAYING AT THEIR FIRST SHOW IN SANTA BARBARA ON FEB. 8, 2020. 2/9/20"/>
+<img src="img/5.jpg" width="100%" height="100%" alt="HANK, LEAD BASSIST, AND LIAM HAVE ONLY RECENTLY BEGUN PLAYING TOGETHER. HANK HAS TEMPORARILY TAKEN OVER AFTER THEIR FRIEND AND FORMER BASSIST, CHAD APODACA, WENT ABROAD TO THAILAND. 2/9/20"/>
+<img src="img/6.jpg" width="100%" height="100%" alt="LIAM FIRST BEGAN PLAYING THE DRUMS IN HIS MIDDLE SCHOOL’S BAND. IN HIGH SCHOOL HE AND HIS FRIENDS “KIND OF HAD A BAND,” BUT LIAM EXPLAINS THAT HE LEARNED MOST OF HIS TECHNIQUES DURING HIS TIME AS A MEMBER OF THE DRUMLINE. 2/9/20"/>
+<img src="img/7.jpg" width="100%" height="100%" alt="THE AUTOPIPE TV SITS IN APARTMENT 6 BEHIND LIAM’S DRUM SET. THE TV HAS BEEN DISPLAYED AT ALL OF AUTOPIPE’S SHOWS SINCE LIAM CONVERTED IT FROM A TAPE PLAYER IN 2018. IT HAS BECOME A TRADEMARK FOR THE BAND, CONSISTENTLY APPEARING IN THEIR MUSIC VIDEOS AND SOCIAL MEDIA. 2/9/20"/>
+<img src="img/8.jpg" width="100%" height="100%" alt="OLIVER LEADS THE OTHERS IN PRACTICING THEIR NEW SONG. “LET’S GET THIS DOWN SO WE CAN PLAY IT AT OUR NEXT SHOW,” HE SAYS WHILE BEING INTERRUPTED BY THE TAPPING OF THE DRUMS AND VARIOUS GUITAR RIFFS. AUTOPIPE IS WORKING ON DEVELOPING MORE MUSIC IN ANTICIPATION OF THEIR UPCOMING SHOW IN SANTA BARBARA ON FEB. 21, 2020. 2/9/20"/>
+<img src="img/9.jpg" width="100%" height="100%" alt="OLIVER, LEAD SINGER AND RHYTHM GUITARIST, GETS IN THE ZONE WHILE SINGING THE BAND’S FIRST RECORDED SONG; KOALA DREAMS. AUTOPIPE IS WIDELY RECOGNIZED FOR OLIVER’S UNORTHODOX THEATRICS DURING THEIR CONCERTS. 2/9/20"/>
+<img src="img/10.jpg" width="100%" height="100%" alt="ARJUN MESSES AROUND WITH THE CORDS OF HIS GUITAR WHILE OLIVER AND THE OTHERS PLAN AUTOPIPE’S SCHEDULE FOR THE REST OF THE QUARTER. THE FOUR BOYS HOPE TO BEGIN CHARGING MORE FOR THEIR SHOWS SINCE THEIR POPULARITY HAS GROWN OVER THE LAST THREE YEARS. 2/9/20"/>
+<img src="img/11.jpg" width="100%" height="100%" alt="A STOLEN SIGN FROM THE DORM WHERE THE BAND-MEMBERS OF AUTOPIPE MET HANGS ON THE WALL OF OLIVER AND, JUNIOR SOIL SCIENCE MAJOR, LIAM’S APARTMENT, REFERRED TO AS “APT 6”. BELOW A CARICATURE, AN AUTOPIPE POSTER, A PIECE OF CARDBOARD, AND A HOLIDAY CARD. 2/9/20"/>
+<img src="img/12.jpg" width="100%" height="100%" alt="AFTER PRACTICE IS OVER, LIAM AND THE OTHER BAND MEMBERS DISCUSS THE PAYMENT OF THEIR MOST RECENT HOUSE SHOW, MENTIONING THAT SHOW HOSTS SHOULD BE MORE TRANSPARENT ABOUT THE PROFITS MADE. CONSISTENT HOUSE-SHOW HOST AND JUNIOR BIOLOGY MAJOR KEAGEN HANSEN SAYS ON THE SUBJECT: “IT’S HARD TO MAKE SURE EVERYONE’S HAPPY, ESPECIALLY WHEN YOU’RE JUGGLING WHAT YOU WANT [FOR YOUR HOUSE] VERSUS WHAT THE PEOPLE WANT, AND THEN ALSO WHAT THE BAND WANTS.” 2/9/20"/>
+<img src="img/13.jpg" width="100%" height="100%" alt="THE BAND PACKS UP THEIR INSTRUMENTS FOR THE NIGHT. THIS WILL NOT BE THE LAST LATE-NIGHT JAM SESSION FOR THE AUTOPIPE BOYS. 2/9/20"/>
+</div><!--end of slideshow-->
+<!--beginning of slideshow caption-->
+<div id="alt-caption" class="center">
+</div><!--end of slideshow caption-->
+<p class="tab"><a class="hvr-skew-forward" href="#tl">WHO IS AUTOPIPE?</a></p>
+</article><!--end of article-->
+</div><!--end of row-->
+<!--end of slideshow section-->
+    
+     <div class="parallax" data-parallax="scroll" data-bleed="10" data-speed="0.2" iosFix="true" data-image-src="img/boysandhelmets.jpg">
+</div>
+	
+<!--beginning of audio section-->
+<div class="row whiteBG">
+<h2 id="tl">What makes Autopipe, Autopipe?</h2>
+<article>
+  <p class="tab">CLICK ON EACH IMAGE TO HEAR ABOUT WHAT MAKES AUTOPIPE UNIQUE.<br>(DOUBLE-CLICK TO PAUSE AUDIO)</p>
+  <div class="table">
+	<div id="trip">
+<audio id="audio_1">
+    <source src="audio/Arjun.mp3" type="audio/mpeg"/>
+</audio>        
+<audio id="audio_2">
+    <source src="audio/Gigi.mp3" type="audio/mpeg"/>
+</audio>        
+<audio id="audio_3">
+	<source src="audio/Hank.mp3" type="audio/mpeg"/>
+</audio>
+
+<img src="img/rollover/arjungif.gif" class="rollover" alt="description" onMouseOver="this.src='img/rollover/arjun copy.jpg'" onMouseOut="this.src='img/rollover/Arjun.gif'" onClick="document.getElementById('audio_1').play(); return false;" onDblClick="document.getElementById('audio_1').pause(); return false;">
+ /&gt; 
+            
+<img src="img/rollover/gigigif.gif" class="rollover" alt="description" onMouseOver="this.src='img/rollover/gigi copy.jpg'" onMouseOut="this.src='img/rollover/Gigi.gif'" onClick="document.getElementById('audio_2').play(); return false;" onDblClick="document.getElementById('audio_2').pause(); return false;">
+ /&gt;
+            
+<img src="img/rollover/hankgif.gif" class="rollover" alt="description" onMouseOver="this.src='img/rollover/hank copy.jpg'" onMouseOut="this.src='img/rollover/Hank.gif'" onClick="document.getElementById('audio_3').play(); return false;" onDblClick="document.getElementById('audio_3').pause(); return false;">
+/&gt;
+	</div>
+      <p class="tab"><a class="hvr-skew-forward" href="#vid">Shows</a></p>
+</div>
+		
+</article>
+
+
+</div>
+
+<!--end of audio section-->
+    
+<!--beginning of parallax image-->
+<div class="parallax" data-parallax="scroll" data-bleed="10" data-speed="0.2" iosFix="true" data-image-src="img/extravaganzacrowd.jpg">
+</div>
+<!--end of parallax image-->
+
+<!--beginning of video section-->
+<div class="row orangeBG">
+    <h2 id="vid"><font color="white">Autopipe Antics</font></h2>
+<article>
+    <p class="tab"><font color="white">MEET OLIVER AND LIAM, TWO OF FOUR CAL POLY STUDENTS WHO STARTED AUTOPIPE, AS THEY GIVE US SOME INSIGHT ABOUT THE ORIGIN STORY OF THEIR BAND AND WHAT MAKES THEM WHO THEY ARE TODAY.</font></p>	
+<video width="100%" height="100%" poster="img/head-image.jpg" controls>
+<source src="img/AUTOPIPE.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+<p class="tab"><a class="hvr-skew-forward" href="#num">HISTORY</a></p>
+</article>
+</div>
+<!--end of video section-->
+    
+     <div class="parallax" class="border_gradient"data-parallax="scroll" data-bleed="10" data-speed="0.2" iosFix="true" data-image-src="img/bloodyoliver.jpg">
+</div>
+
+<!--beginning of infographic section-->
+<div class="row whiteBG">
+<h2 id="num">THE HISTORY OF ROCK</h2>
+    <div class="infogram-embed" data-id="76116503-6ab0-4b46-ae5e-597092ab69c4" data-type="interactive" data-title="Timeline Dark Infographic"></div><script>!function(e,i,n,s){var t="InfogramEmbeds",d=e.getElementsByTagName("script")[0];if(window[t]&&window[t].initialized)window[t].process&&window[t].process();else if(!e.getElementById(n)){var o=e.createElement("script");o.async=1,o.id=n,o.src="https://e.infogram.com/js/dist/embed-loader-min.js",d.parentNode.insertBefore(o,d)}}(document,0,"infogram-async");</script><div style="padding:8px 0;font-family:Arial!important;font-size:13px!important;line-height:15px!important;text-align:center;border-top:1px solid #dadada;margin:0 30px">
+<article>
+<p class="tab"></p>
+<!--infographic embed code here-->
+</article>
+</div>
+<!--end of infographic section-->
+
+	
+<!--beginning of footer-->
+<footer>Autopipe | San Luis Obispo, CA | Copyright 2019 | Site by Tula Pitcher 
+</footer>
+<!--end of footer-->
+	
+</body>
+	
+<!--the following script controls the responsive navigation-->
+<script>
+    
+	(function($) { // Begin jQuery
+  $(function() { // DOM ready
+    // If a link has a dropdown, add sub menu toggle.
+    $('nav ul li a:not(:only-child)').click(function(e) {
+      $(this).siblings('.nav-dropdown').toggle();
+      // Close one dropdown when selecting another
+      $('.nav-dropdown').not($(this).siblings()).hide();
+      e.stopPropagation();
+    });
+    // Clicking away from dropdown will remove the dropdown class
+    $('html').click(function() {
+      $('.nav-dropdown').hide();
+    });
+    // Toggle open and close nav styles on click
+    $('#nav-toggle').click(function() {
+      $('nav ul').slideToggle();
+    });
+    // Hamburger to X toggle
+    $('#nav-toggle').on('click', function() {
+      this.classList.toggle('active');
+    });
+  }); // end DOM ready
+})(jQuery); // end jQuery
+	</script>
+	<script>
+	var headertext = [];
+var headers = document.querySelectorAll("#miyazaki th"),
+tablerows = document.querySelectorAll("#miyazaki th"),
+tablebody = document.querySelector("#miyazaki tbody");
+for(var i = 0; i < headers.length; i++) {
+	var current = headers[i];
+	headertext.push( current.textContent.replace( /\r?\n|\r/,"") );
+}
+for (var i = 0, row; row = tablebody.rows[i]; i++) {
+	for (var j = 0, col; col = row.cells[j]; j++) {
+		col.setAttribute("data-th", headertext[j]);
+	}
+}
+</script>
+	
+	<!----Prevents audio tracks from playing simultaneously---->
+<script>
+document.addEventListener('play', function(e){
+    var audios = document.getElementsByTagName('audio');
+    for(var i = 0, len = audios.length; i < len;i++){
+        if(audios[i] != e.target){
+            audios[i].pause();
+        }
+    }
+}, true);
+    </script>
+
+</html>
